@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commit Message Overlay</title>
+  <style>
+    @font-face {
+      font-family: 'SourceCodePro-SemiBold';
+      src: url('SourceCodePro-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+    }
+    @font-face {
+      font-family: 'SourceCodePro-Regular';
+      src: url('SourceCodePro-Regular.ttf') format('truetype');
+      font-weight: 400;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+    }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: url('흰배경.png') no-repeat left top;
+      background-size: cover;
+      margin: 0;
+      box-shadow: none;
+    }
+    .text-group {
+      position: absolute;
+      top: 180px;
+      left: 345px;
+      width: 90%;
+    }
+    .input1 {
+      font-family: 'SourceCodePro-SemiBold', monospace;
+      font-size: 1rem;
+      border: none;
+      background: transparent;
+      outline: none;
+      color: #2F2F2F;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .input2 {
+      font-family: inherit;
+      font-size: 0.9rem;
+      border: none;
+      background: transparent;
+      outline: none;
+      color: #2F2F2F;
+      width: 100%;
+    }
+    .input1:focus, .input2:focus {
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-group">
+      <input class="input1" value="Commit message:" title="첫 번째 줄 텍스트" />
+      <input class="input2" value="“나는… 너의 늙고 추한 모습을, 보고 싶었나봐.”" title="두 번째 줄 텍스트" />
+    </div>
+  </div>
+</body>
+</html>
